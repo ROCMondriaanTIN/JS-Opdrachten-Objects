@@ -5,15 +5,15 @@ const person = {
     lastName: "Jamal",
     age: 18,
     course: "Software Developer",
-    Score: "",
+    Score: "21",
 };
 
-const facebookPost = {
-    userName: "",
-    title: "",
-    story: "",
-    date: "",
-    views: "",
+const nosPost = {
+    userName: "NOS",
+    title: "Israëlische leger: 'Verschillende overheidsgebouwen in Gaza overgenomen",
+    story: "Het Israëlische leger meldt dat het de afgelopen dagen verschillende overheidsgebouwen in Gaza-Stad heeft ingenomen. Volgens het leger gaat het onder meer om een gemeentehuis, het regeringsgebouw en het hoofdkwartier van de politie. Een woordvoerder van het Israëlische leger zegt dat de instellingen worden gebruikt door Hamas voor militaire doeleinden. Binnen zouden onder meer wapens en trainings en studiemateriaal van Hamas zijn gevonden.",
+    date: "14-11-2023, 12:27",
+    views: "2,3m",
 };
 
 const firstRecept = {
@@ -29,7 +29,7 @@ const secondRecept = {
 };
 
 const thirdRecept = {
-    title: "",
-    description: "",
-    healthy: "",
+    title: "Kip in zwarte pepersaus",
+    description: "Heerlijke en makkelijke roerbak met (vega) kip en groenten in een zelfgemaakte zwarte pepersaus. Serveer met noedels of rijst voor een lekkere avondmaaltijd.",
+    healthy: "yes",
 };
