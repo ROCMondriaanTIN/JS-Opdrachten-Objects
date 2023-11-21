@@ -95,3 +95,9 @@ const fourthPerson = ` {
     }
   }
 `;  
+
+const objPerson = JSON.parse(fourthPerson);
+console.log("Firstname is: ", objPerson.firstname);
+console.log("lastname is: ", objPerson.lastname);
+console.log("email is: ", objPerson.email);
+console.log("birthdate is: ", objPerson.birthDate);
