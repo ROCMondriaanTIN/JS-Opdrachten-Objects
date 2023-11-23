@@ -63,6 +63,7 @@ console.log("title is: ", objThirdPerson.title);
 console.log("content is: ", objThirdPerson.content);
 console.log("image is: ", objThirdPerson.image);
 console.log("zzzzzzzzzzzzzzzzzzzz", objThirdPerson.zzzzzzzzzzzzzzzzzzzz);
+
 // odpracht 3
 const fourthPerson = ` {
     "id": 4,
@@ -110,3 +111,114 @@ console.log("address is: ", objFourthPerson.website);
 console.log("address is: ", objFourthPerson.address);
 console.log("company is: ", objFourthPerson.company);
 console.log("zzzzzzzzzzzzzzzzzzzz", objFourthPerson.zzzzzzzzzzzzzzzzzzzz);
+
+//odpracht 4
+const fifthPerson = ` {
+  "id": 11,
+  "postId": 3,
+  "userId": 2,
+  "comment": "Cras convallis ipsum eget sapien hendrerit dignissim.",
+  "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+}
+`;
+
+const objFifthPerson = JSON.parse(fifthPerson);
+console.log("id is: ", objFifthPerson.id);
+console.log("postId is: ", objFifthPerson.postId);
+console.log("userId is: ", objFifthPerson.userId);
+console.log("comment is: ", objFifthPerson.comment);
+console.log("zzzzzzzzzzzzzzzzzzzz", objFifthPerson.zzzzzzzzzzzzzzzzzzzz);
+
+//opdracht 5
+const sixPerson = `[
+  {
+    "id": 1,
+    "postId": 1,
+    "userId": 1,
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "id": 2,
+    "postId": 1,
+    "userId": 1,
+    "comment": "Nulla quis libero vel orci rutrum suscipit."
+  },
+  {
+    "id": 3,
+    "postId": 3,
+    "userId": 2,
+    "comment": "Cras ac elit sit amet mi placerat bibendum."
+  }
+]`;
+
+const objSixPerson = JSON.parse(sixPerson);
+
+// Toon alleen de "comment" van elk object in de console
+for (const obj of objSixPerson) {
+  console.log("comment is:", obj.comment);
+}
+
+
+
+//opdracht 6
+// const album = `[
+// {
+//     "albumId": 1,
+//     "id": 1,
+//     "title": "accusamus beatae ad facilis cum similique qui sunt",
+//     "url": "https://via.placeholder.com/600/92c952",
+//     "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 2,
+//     "title": "reprehenderit est deserunt velit ipsam",
+//     "url": "https://via.placeholder.com/600/771796",
+//     "thumbnailUrl": "https://via.placeholder.com/150/771796",
+//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 3,
+//     "title": "officia porro iure quia iusto qui ipsa ut modi",
+//     "url": "https://via.placeholder.com/600/24f355",
+//     "thumbnailUrl": "https://via.placeholder.com/150/24f355",
+//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 4,
+//     "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+//     "url": "https://via.placeholder.com/600/d32776",
+//     "thumbnailUrl": "https://via.placeholder.com/150/d32776",
+//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 5,
+//     "title": "natus nisi omnis corporis facere molestiae rerum in",
+//     "url": "https://via.placeholder.com/600/f66b97",
+//     "thumbnailUrl": "https://via.placeholder.com/150/f66b97",
+//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+//   },
+//   {
+//     "albumId": 1,
+//     "id": 6,
+//     "title": "accusamus ea aliquid et amet sequi nemo",
+//     "url": "https://via.placeholder.com/600/56a8c2",
+//     "thumbnailUrl": "https://via.placeholder.com/150/56a8c2",
+//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+//   }
+// ]
+// `;
+
+// const objAlbum = JSON.parse(album);
+
+// console.log("albumid is: ", objAlbum.albumId);
+// console.log("id is: ", objAlbum.id);
+// console.log("title is: ", objAlbum.title);
+// console.log("url is: ", objAlbum.url);
+// console.log("thumbnailUrl is: ", objAlbum.thumbnailUrl);
+// console.log("zzzzzzzzzzzzzzzzzzzz", objAlbum.zzzzzzzzzzzzzzzzzzzz);
+
