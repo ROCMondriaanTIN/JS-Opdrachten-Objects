@@ -161,64 +161,114 @@ for (const obj of objSixPerson) {
 
 
 //opdracht 6
-// const album = `[
-// {
-//     "albumId": 1,
-//     "id": 1,
-//     "title": "accusamus beatae ad facilis cum similique qui sunt",
-//     "url": "https://via.placeholder.com/600/92c952",
-//     "thumbnailUrl": "https://via.placeholder.com/150/92c952",
-//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
-//   },
-//   {
-//     "albumId": 1,
-//     "id": 2,
-//     "title": "reprehenderit est deserunt velit ipsam",
-//     "url": "https://via.placeholder.com/600/771796",
-//     "thumbnailUrl": "https://via.placeholder.com/150/771796",
-//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
-//   },
-//   {
-//     "albumId": 1,
-//     "id": 3,
-//     "title": "officia porro iure quia iusto qui ipsa ut modi",
-//     "url": "https://via.placeholder.com/600/24f355",
-//     "thumbnailUrl": "https://via.placeholder.com/150/24f355",
-//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
-//   },
-//   {
-//     "albumId": 1,
-//     "id": 4,
-//     "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
-//     "url": "https://via.placeholder.com/600/d32776",
-//     "thumbnailUrl": "https://via.placeholder.com/150/d32776",
-//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
-//   },
-//   {
-//     "albumId": 1,
-//     "id": 5,
-//     "title": "natus nisi omnis corporis facere molestiae rerum in",
-//     "url": "https://via.placeholder.com/600/f66b97",
-//     "thumbnailUrl": "https://via.placeholder.com/150/f66b97",
-//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
-//   },
-//   {
-//     "albumId": 1,
-//     "id": 6,
-//     "title": "accusamus ea aliquid et amet sequi nemo",
-//     "url": "https://via.placeholder.com/600/56a8c2",
-//     "thumbnailUrl": "https://via.placeholder.com/150/56a8c2",
-//     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
-//   }
-// ]
-// `;
+const album = `[
+{
+    "albumId": 1,
+    "id": 1,
+    "title": "accusamus beatae ad facilis cum similique qui sunt",
+    "url": "https://via.placeholder.com/600/92c952",
+    "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+    "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+  },
+  {
+    "albumId": 1,
+    "id": 2,
+    "title": "reprehenderit est deserunt velit ipsam",
+    "url": "https://via.placeholder.com/600/771796",
+    "thumbnailUrl": "https://via.placeholder.com/150/771796",
+    "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+  },
+  {
+    "albumId": 1,
+    "id": 3,
+    "title": "officia porro iure quia iusto qui ipsa ut modi",
+    "url": "https://via.placeholder.com/600/24f355",
+    "thumbnailUrl": "https://via.placeholder.com/150/24f355",
+    "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+  },
+  {
+    "albumId": 1,
+    "id": 4,
+    "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+    "url": "https://via.placeholder.com/600/d32776",
+    "thumbnailUrl": "https://via.placeholder.com/150/d32776",
+    "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+  },
+  {
+    "albumId": 1,
+    "id": 5,
+    "title": "natus nisi omnis corporis facere molestiae rerum in",
+    "url": "https://via.placeholder.com/600/f66b97",
+    "thumbnailUrl": "https://via.placeholder.com/150/f66b97",
+    "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+  },
+  {
+    "albumId": 1,
+    "id": 6,
+    "title": "accusamus ea aliquid et amet sequi nemo",
+    "url": "https://via.placeholder.com/600/56a8c2",
+    "thumbnailUrl": "https://via.placeholder.com/150/56a8c2",
+    "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
+  }
+]
+`;
 
-// const objAlbum = JSON.parse(album);
+const objAlbum = JSON.parse(album);
 
-// console.log("albumid is: ", objAlbum.albumId);
-// console.log("id is: ", objAlbum.id);
-// console.log("title is: ", objAlbum.title);
-// console.log("url is: ", objAlbum.url);
-// console.log("thumbnailUrl is: ", objAlbum.thumbnailUrl);
-// console.log("zzzzzzzzzzzzzzzzzzzz", objAlbum.zzzzzzzzzzzzzzzzzzzz);
+console.log("albumid is: ", objAlbum.albumId);
+console.log("id is: ", objAlbum.id);
+console.log("title is: ", objAlbum.title);
+console.log("url is: ", objAlbum.url);
+console.log("thumbnailUrl is: ", objAlbum.thumbnailUrl);
+console.log("zzzzzzzzzzzzzzzzzzzz", objAlbum.zzzzzzzzzzzzzzzzzzzz);
 
+//opdracht 7
+const seventhPerson = `{ 
+  name: 'John', 
+  age: 20,
+  marks: {
+      science: 70,
+      math: 75
+  }
+}
+`;
+
+const objSeventhPerson = JSON.parse(seventhPerson);
+console.log("name is: ", objSeventhPerson.name);
+console.log("age is: ", objSeventhPerson.age);
+console.log("marks are: ", objSeventhPerson.marks);
+
+//opdracht 8
+
+const eightPerson = `[
+	{ 
+		name: 'Wolverine', 
+		age: 38,
+		marks: {
+			science: 20,
+			math: 15
+		}
+	},
+	{ 
+		name: 'Xavier', 
+		age: 64,
+		marks: {
+			science: 95,
+			math: 90
+		}
+	},
+	{ 
+		name: 'Magneto', 
+		age: 68,
+		marks: {
+			science: 90,
+			math: 85
+		}
+	}
+]
+`;
+
+const objEightPerson = JSON.parse(eightPerson);
+console.log("name is: ", objEightPerson.name);
+console.log("age is: ", objEightPerson.age);
+console.log("marks are: ", objEightPerson.marks);
