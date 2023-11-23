@@ -4,7 +4,7 @@ console.log("nothing here");
 const person = `
 {
     "firstname": "Judeska",
-    "email": "judeska@example.com"
+    "email": "judeska@example.com",
     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
 }
 `;
@@ -94,19 +94,19 @@ const fourthPerson = ` {
       "name": "GHI Corporation",
       "catchPhrase": "Your success is our priority",
       "bs": "Consulting"
-    }
+    },
     "zzzzzzzzzzzzzzzzzzzz": "zzzzzzzzzzzzzzzzzzzz"
   }
 `;
 
-// const objFourthPerson = JSON.parse(fourthPerson);
-// console.log("Firstname is: ", objFourthPerson.firstname);
-// console.log("lastname is: ", objFourthPerson.lastname);
-// console.log("email is: ", objFourthPerson.email);
-// console.log("birthdate is: ", objFourthPerson.birthDate);
-// console.log("login is: ", objFourthPerson.login);
-// console.log("phone is: ", objFourthPerson.phone);
-// console.log("address is: ", objFourthPerson.website);
-// console.log("address is: ", objFourthPerson.address);
-// console.log("company is: ", objFourthPerson.company);
-// console.log("zzzzzzzzzzzzzzzzzzzz", objFourthPerson.zzzzzzzzzzzzzzzzzzzz);
+const objFourthPerson = JSON.parse(fourthPerson);
+console.log("Firstname is: ", objFourthPerson.firstname);
+console.log("lastname is: ", objFourthPerson.lastname);
+console.log("email is: ", objFourthPerson.email);
+console.log("birthdate is: ", objFourthPerson.birthDate);
+console.log("login is: ", objFourthPerson.login);
+console.log("phone is: ", objFourthPerson.phone);
+console.log("address is: ", objFourthPerson.website);
+console.log("address is: ", objFourthPerson.address);
+console.log("company is: ", objFourthPerson.company);
+console.log("zzzzzzzzzzzzzzzzzzzz", objFourthPerson.zzzzzzzzzzzzzzzzzzzz);
