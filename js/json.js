@@ -151,12 +151,10 @@ const sixPerson = `[
   }
 ]`;
 
-const objSixPerson = JSON.parse(sixPerson);
-
-// Toon alleen de "comment" van elk object in de console
-for (const obj of objSixPerson) {
-  console.log("comment is:", obj.comment);
-}
+// const objSixPerson = JSON.parse(sixPerson);
+// for (const obj of objSixPerson) {
+//   console.log("comment is:", obj.comment);
+// }
 
 
 
@@ -213,62 +211,79 @@ const album = `[
 ]
 `;
 
-const objAlbum = JSON.parse(album);
-
-console.log("albumid is: ", objAlbum.albumId);
-console.log("id is: ", objAlbum.id);
-console.log("title is: ", objAlbum.title);
-console.log("url is: ", objAlbum.url);
-console.log("thumbnailUrl is: ", objAlbum.thumbnailUrl);
-console.log("zzzzzzzzzzzzzzzzzzzz", objAlbum.zzzzzzzzzzzzzzzzzzzz);
+// const objAlbum = JSON.parse(album);
+//   const ulList = document.querySelector(`ul`);
+// for (let = 0; i < objAlbum.length, i++) {
+//   const album = objAlbum[i];
+//   ulList.innerHTML +=`<li>${album.title}</li>`;
+// };
+// console.log("albumid is: ", objAlbum.albumId);
+// console.log("id is: ", objAlbum.id);
+// console.log("title is: ", objAlbum.title);
+// console.log("url is: ", objAlbum.url);
+// console.log("thumbnailUrl is: ", objAlbum.thumbnailUrl);
+// console.log("zzzzzzzzzzzzzzzzzzzz", objAlbum.zzzzzzzzzzzzzzzzzzzz);
 
 //opdracht 7
-const seventhPerson = `{ 
-  name: 'John', 
-  age: 20,
-  marks: {
-      science: 70,
-      math: 75
-  }
-}
-`;
+// const seventhPerson = `{ 
+//   name: 'John', 
+//   age: 20,
+//   marks: {
+//       science: 70,
+//       math: 75
+//   }
+// }
+// `;
 
-const objSeventhPerson = JSON.parse(seventhPerson);
-console.log("name is: ", objSeventhPerson.name);
-console.log("age is: ", objSeventhPerson.age);
-console.log("marks are: ", objSeventhPerson.marks);
+// const objSeventhPerson = JSON.parse(seventhPerson);
+// console.log("name is: ", objSeventhPerson.name);
+// console.log("age is: ", objSeventhPerson.age);
+// console.log("marks are: ", objSeventhPerson.marks);
 
 //opdracht 8
 
-const eightPerson = `[
-	{ 
-		name: 'Wolverine', 
-		age: 38,
-		marks: {
-			science: 20,
-			math: 15
-		}
-	},
-	{ 
-		name: 'Xavier', 
-		age: 64,
-		marks: {
-			science: 95,
-			math: 90
-		}
-	},
-	{ 
-		name: 'Magneto', 
-		age: 68,
-		marks: {
-			science: 90,
-			math: 85
-		}
-	}
-]
-`;
+// const eightPerson = `[
+// 	{ 
+// 		name: 'Wolverine', 
+// 		age: 38,
+// 		marks: {
+// 			science: 20,
+// 			math: 15
+// 		}
+// 	},
+// 	{ 
+// 		name: 'Xavier', 
+// 		age: 64,
+// 		marks: {
+// 			science: 95,
+// 			math: 90
+// 		}
+// 	},
+// 	{ 
+// 		name: 'Magneto', 
+// 		age: 68,
+// 		marks: {
+// 			science: 90,
+// 			math: 85
+// 		}
+// 	}
+// ]
+// `;
 
-const objEightPerson = JSON.parse(eightPerson);
-console.log("name is: ", objEightPerson.name);
-console.log("age is: ", objEightPerson.age);
-console.log("marks are: ", objEightPerson.marks);
+// const objEightPerson = JSON.parse(eightPerson);
+// console.log("name is: ", objEightPerson.name);
+// console.log("age is: ", objEightPerson.age);
+// console.log("marks are: ", objEightPerson.marks);
+
+//FETCH. 
+fetch("https://www.jsonplaceholder.org/"). then(function(response) {
+  console.log("response van de server:",response);
+
+  return response.text();
+})
+.then(function(json){
+   console.log("ontvangen JSON data", json);
+   const object = JSON.parse(json);
+   console.log("object uit JSON data", object);
+});
+
