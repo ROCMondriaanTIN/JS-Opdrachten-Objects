@@ -1,98 +1,132 @@
-  //opdracht 1,2
-  const teRadenWoord = "skill issue";
+// Opdracht 1
+let targetWord = "skill issue";
+let guessedWord = "";
 
-function raadWoord() {
-    while (true) {
-      const geradenWoord = prompt("Raad het woord (of typ 'quit' om te stoppen):");
-  
-      if (geradenWoord === null) {
-        alert("Spel gestopt. Tot ziens!");
-        break;
-      }
-  
-      if (geradenWoord.toLowerCase() === 'quit') {
-        alert("Bedankt voor het spelen. Tot ziens!");
-        break;
-      }
-  
-      if (geradenWoord === teRadenWoord) {
-        alert("Goed geraden! Het woord is: " + teRadenWoord);
-        break;
-      } else {
-        alert("Helaas, probeer opnieuw!");
-      }
-    }
+while (guessedWord !== targetWord) {
+  guessedWord = prompt("Raad het woord:");
+
+  if (guessedWord === "quit") {
+    break;
   }
-    raadWoord();
-  
 
-//opdracht 3
-// Array van temperaturen
-const temperaturen = [3.6, 3.9, 6.5, 9.9, 13.4, 16.2, 18.3, 17.9, 14.7, 10.9, 7.0, 4.2];
+  if (guessedWord === targetWord) {
+    alert("Goed geraden!");
+  } else {
+    alert("Probeer opnieuw.");
+  }
+}
 
-// Vind de warmste temperatuur
-const warmsteTemperatuur = Math.max(...temperaturen);
-console.log("De warmste temperatuur is:", warmsteTemperatuur);
+// Opdracht 3
+const temperatures = [3.6, 3.9, 6.5, 9.9, 13.4, 16.2, 18.3, 17.9, 14.7, 10.9, 7.0, 4.2];
 
-// Vind de koudste temperatuur
-const koudsteTemperatuur = Math.min(...temperaturen);
-console.log("De koudste temperatuur is:", koudsteTemperatuur);
+const maxTemperature = Math.max(...temperatures);
+const minTemperature = Math.min(...temperatures);
+const aboveTenDegrees = temperatures.filter(temp => temp > 10);
 
-// Toon alle temperaturen boven de 10 graden
-const temperaturenBovenTien = temperaturen.filter(temperatuur => temperatuur > 10);
-console.log("Temperaturen boven de 10 graden:", temperaturenBovenTien);
+console.log("Warmste temperatuur: " + maxTemperature);
+console.log("Koudste temperatuur: " + minTemperature);
+console.log("Temperaturen boven de 10 graden: " + aboveTenDegrees);
 
-//odpracht 4
-// Array van temperaturen
-const Temperaturen = [3.6, 3.9, 6.5, 9.9, 13.4, 16.2, 18.3, 17.9, 14.7, 10.9, 7.0, 4.2];
-
-// Maak een array van objecten met temperaturen en maanden
-const temperaturenObjecten = [
-  { temperature: 3.6, month: "Januari" },
-  { temperature: 3.9, month: "Februari" },
-  { temperature: 6.5, month: "Maart" },
-  { temperature: 9.9, month: "April" },
-  { temperature: 13.4, month: "Mei" },
-  { temperature: 16.2, month: "Juni" },
-  { temperature: 18.3, month: "Juli" },
-  { temperature: 17.9, month: "Augustus" },
-  { temperature: 14.7, month: "September" },
-  { temperature: 10.9, month: "Oktober" },
-  { temperature: 7.0, month: "November" },
-  { temperature: 4.2, month: "December" }
+// Opdracht 4
+const months = [
+  "Januari", "Februari", "Maart", "April", "Mei", "Juni",
+  "Juli", "Augustus", "September", "Oktober", "November", "December"
 ];
 
-// Toon de objecten op de webpagina
-temperaturenObjecten.forEach(item => {
-  console.log(`${item.month}: ${item.temperature} graden`);
+const temperatureObjects = temperatures.map((temp, index) => {
+  return {
+    temperature: temp,
+    month: months[index]
+  };
 });
 
-//opdracht 5
-function toonTemperatuurTabel(temperaturen) {
-    // Maak een tabel en voeg de kopregel toe
-    const table = document.createElement("table");
-    const thead = table.createTHead();
-    const headerRow = thead.insertRow();
-    const maandHeader = document.createElement("th");
-    maandHeader.textContent = "Maand";
-    headerRow.appendChild(maandHeader);
-    const temperatuurHeader = document.createElement("td");
-    temperatuurHeader.textContent = "Temperatuur";
-    headerRow.appendChild(temperatuurHeader);
+temperatureObjects.forEach(obj => {
+  console.log(obj.month + ": " + obj.temperature + " graden");
+});
 
-    // Voeg de temperatuurdata toe aan de tabel
-    const tbody = table.createTBody();
-    temperaturen.forEach(item => {
-      const row = tbody.insertRow();
-      const maandCell = row.insertCell(0);
-      maandCell.textContent = item.month;
-      const temperatuurCell = row.insertCell(1);
-      temperatuurCell.textContent = item.temperature;
-    });
+// Opdracht 5
+document.write("<h2>Opdracht 5</h2>");
+document.write("<table>");
+document.write("<thead><tr><th>Maand</th><th>Temperatuur</th></tr></thead>");
+document.write("<tbody>");
+temperatureObjects.forEach(obj => {
+  document.write("<tr>");
+  document.write("<td>" + obj.month + "</td>");
+  document.write("<td>" + obj.temperature + "</td>");
+  document.write("</tr>");
+});
+document.write("</tbody></table>");
 
-    // Voeg de tabel toe aan de body van het document
-    document.body.appendChild(table);
+// Opdracht 6
+document.write("<h2>Opdracht 6</h2>");
+document.write('<div id="cardContainer"></div>');
+function createCard(text) {
+  const cardContainer = document.getElementById("cardContainer");
+  const card = document.createElement("div");
+  card.className = "card";
+  card.textContent = text;
+  cardContainer.appendChild(card);
+}
+const userInput = prompt("Voer een tekst in voor de card:");
+createCard(userInput);
+
+// Opdracht 7
+document.write("<h2>Opdracht 7</h2>");
+const countries = [
+  {
+    hoofdstad: "Amsterdam",
+    land: "Nederland",
+    inwonersaantal: 17000000
+  },
+  {
+    hoofdstad: "Berlijn",
+    land: "Duitsland",
+    inwonersaantal: 83000000
+  },
+  {
+    hoofdstad: "Parijs",
+    land: "Frankrijk",
+    inwonersaantal: 67000000
+  },
+  {
+    hoofdstad: "Londen",
+    land: "Verenigd Koninkrijk",
+    inwonersaantal: 66000000
+  },
+  {
+    hoofdstad: "Rome",
+    land: "Italië",
+    inwonersaantal: 60000000
+  },
+  {
+    hoofdstad: "Madrid",
+    land: "Spanje",
+    inwonersaantal: 47000000
   }
+];
 
-  // Roep de functie aan om de tabel weer te geven
-  toonTemperatuurTabel(temperaturenObjecten);
+countries.forEach(country => {
+  console.log(country);
+});
+
+const maxPopulationCountry = countries.reduce((max, country) => {
+  return country.inwonersaantal > max.inwonersaantal ? country : max;
+});
+
+console.log("Land met de meeste inwoners:");
+console.log(maxPopulationCountry);
+
+// Opdracht 8
+document.write("<h2>Opdracht 8</h2>");
+document.write('<div id="countryCardContainer"></div>');
+function createCountryCard(country) {
+  const countryCardContainer = document.getElementById("countryCardContainer");
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `<strong>${country.land}</strong><br>Hoofdstad: ${country.hoofdstad}<br>Inwoners: ${country.inwonersaantal}`;
+  countryCardContainer.appendChild(card);
+}
+
+countries.forEach(country => {
+  createCountryCard(country);
+});
